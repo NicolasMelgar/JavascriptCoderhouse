@@ -1,0 +1,72 @@
+/**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    padding: 1rem;
+    background-image: url(./asset/img/Madre-hijo.jpg);
+    background-size: cover;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+    border-radius: 2rem;
+}
+
+h2{
+    margin: 1rem;
+    font-weight: bolder;
+}
+
+.descripcion{
+    margin: 1rem;
+    background-color: rgba(127, 255, 212, .2);
+    padding: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+p{
+    font-weight: bold;
+}
+
+.matematicas{
+    background-color: rgba(138, 43, 226, .3);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+a:hover{
+    color: aliceblue;
+}
+.suma, .resta, .multiplicacion, .division, .adivino{
+    flex-basis: 45%;
+    background-color: rgba(165, 42, 42, .8);
+    margin: 1rem 1rem;
+    text-align: center;
+}
+
+.saludo{
+    position: absolute;
+    background-color: rgba(240, 248, 255, .2);
+    bottom: 1rem;
+    left: 15rem;
+}
