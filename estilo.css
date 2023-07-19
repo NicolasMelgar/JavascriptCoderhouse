@@ -57,7 +57,7 @@ a{
 a:hover{
     color: aliceblue;
 }
-.suma, .resta, .multiplicacion, .division, .adivino{
+.suma, .resta, .multiplicacion, .division, .adivino, .PDF{
     flex-basis: 45%;
     background-color: rgba(165, 42, 42, .8);
     margin: 1rem 1rem;
