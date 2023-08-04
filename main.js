@@ -1,26 +1,8 @@
-let numero = parseInt(prompt("Ingresa un número"));
 
+//Para tener el nombre en la página principal
 
-while (numero != "ESC") {
-    switch(numero){ 
-    case 1:
-        alert("Tomate");
-        break;
-    case 2:
-        alert("Papa");
-        break;
-
-    case 3:
-        alert("Carne");
-        break;
-
-    case 4:
-        alert("Pollo");
-        break;
-
-    default:
-        alert("No está en la lista");
-        break;
-    }
-    numero = parseInt(prompt("Ingresa un número"));
-}
+let nombre = prompt("Por favor, escribe tu nombre");
+let nombreAlumno = document.createElement("h3")
+nombreAlumno.innerHTML = "nombre"
+//document.body.append(nombre)
+nombreAlumnoContenedor.append(nombre);
