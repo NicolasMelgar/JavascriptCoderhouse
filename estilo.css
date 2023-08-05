@@ -13,9 +13,18 @@ body{
     padding: 1rem;
     background-image: url(./asset/img/Madre-hijo.jpg);
     background-size: cover;
+    
 }
 
+
+body #back-blanco{
+    background-color: white; 
+}
+
+
+
 #nombreAlumnoContenedor{
+    
     font-size: 2rem;
     border: 2px solid black;
     text-shadow: 10px 10px 5px white;
@@ -70,7 +79,7 @@ a:hover{
     text-align: center;
 }
 
-.americaLatina, .argentina{
+.americaLatina, .argentina, .adivinoNumero{
     flex-basis: 40%;
     background-color: rgba(83, 175, 110, 0.6);
     margin: 1rem 1rem;
