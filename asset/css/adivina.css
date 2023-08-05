@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+#principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulosAdivinar, #contenedorB, #contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: .2rem .2rem;
+}
+
+p, #labelNumero{
+    text-align: center;
+}
+
+#btnAdivinar, #btnJugar{
+    font-size: 1rem;
+    margin: .5rem .5rem;
+    padding: 10px 10px;
+    border-radius: 15px;
+    background-color: rgb(64, 162, 129);
+    transition: all .5s ease-in-out;
+}
+
+#btnAdivinar:hover, #btnJugar:hover{
+    background-color: aliceblue;
+}
+
+h1, h3, h4{
+    margin-bottom: 1rem;
+}
+#numeroIngresado, #mensajeAdivinador{
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+    font-weight: bolder;
+}
+
+input{
+    text-align: center;
+}

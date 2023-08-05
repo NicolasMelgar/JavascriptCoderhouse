@@ -5,31 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina-Num</title>
-    <link rel="stylesheet" href="../../estilo.css">
+    <link rel="stylesheet" href="../css/adivina.css">
 
 </head>
 
-<body id="back-blanco">
-    <div id="titulosAdivinar">
-        <h2>¿Quieres adivinar un número?</h2>
-        <h3>¿Quieres elegir el valor del número máximo para adivinar?</h3>
-        <h4>Sino, elige un número del 1 al 100</h4>
-    </div>
-    <div class="contenedor">
-        <br>
-        <label for="numeroIngresado">Ingresa un número <br>
-            <input type="number" id="numeroIngresado" placeholder="Escribe un número">
-        </label>
-        <button id="btnAdivinar" onclick="comprobarResultado()">Terminé</button>
-        <p id="mensajeAdivinador">Jugamos</p>
-        <br>
-    </div>
-    <div id="contenedorB"> 
-        <h3>Cantidad de intentos: <p id="intentos">-</p>
-        </h3>
-        <h3>Menos intentos: <p id="menosIntentos">-</p>
-        </h3>
-        <button id="btnJugar" onclick="reiniciar()">Jugar de nuevo</button>
+<body>
+    <div id="principal">
+        <div id="titulosAdivinar">
+            <h1>¿Quieres adivinar un número?</h1>
+            <h3>¿Quieres elegir el valor del número máximo para adivinar?</h3>
+            <h4>Sino, elige un número del 1 al 100</h4>
+        </div>
+        <div id="contenedor">
+            
+            <label id="labelNumero" for="numeroIngresado">Ingresa un número <br>
+                <input type="number" id="numeroIngresado" placeholder="Escribe un número">
+            </label>
+            <br>
+            <button id="btnAdivinar" onclick="comprobarResultado()">Terminé</button>
+            <p id="mensajeAdivinador">Jugemos</p>
+            
+        </div>
+        <div id="contenedorB">
+            <h3>Cantidad de intentos: <p id="intentos">-</p>
+            </h3>
+            <h3>Intentos jugados: <p id="menosIntentos">-</p>
+            </h3>
+            <button id="btnJugar" onclick="reiniciar()">Jugar de nuevo</button>
+        </div>
     </div>
     <script src="../JS/adivinarNum.js"></script>
 </body>
