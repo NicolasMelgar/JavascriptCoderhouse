@@ -11,7 +11,7 @@ html{
 
 body{
     padding: 1rem;
-    background-image: url(./asset/img/Madre-hijo.jpg);
+    background-image: url(../img/Madre-hijo.jpg);
     background-size: cover;
     
 }
@@ -65,14 +65,14 @@ a{
 a:hover{
     color: aliceblue;
 }
-.suma, .resta, .multiplicacion, .division, .adivino, .PDF{
+.matematica, .adivinoNumero, .culturaGeneral{
     flex-basis: 40%;
     background-color: rgba(165, 42, 42, .8);
     margin: 1rem 1rem;
     text-align: center;
 }
 
-.americaLatina, .argentina, .adivinoNumero{
+.americaLatina, .argentina{
     flex-basis: 40%;
     background-color: rgba(83, 175, 110, 0.6);
     margin: 1rem 1rem;

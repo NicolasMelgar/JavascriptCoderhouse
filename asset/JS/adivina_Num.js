@@ -1,7 +1,6 @@
 
 
 
-
 //3 variables:  el número al azar - el numero que ingresa el usuario - el mensaje que ve el usuario
 let miNumeroAdivinar = Math.floor(Math.random()*100) +1;
 console.log(miNumeroAdivinar);
@@ -70,6 +69,7 @@ function reiniciar() {comprobarResultado()
 
     return;
 }
+
 
 
 //comprobarResultado();
