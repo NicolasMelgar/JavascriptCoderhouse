@@ -16,6 +16,11 @@ function btnSumar(){
     operacion__actual = "+"; //asignamos la operación suma a la etiqueta
     operacion.innerHTML = " + "; //gereramos los numeros aleatorios
     nuevaSuma();
+    /*
+    localStorage.setItem("Operacion", "+");
+    localStorage.setItem("Numero", n1);
+    localStorage.setItem("Numero2", n2);
+    */
 }
 
 function nuevaSuma(){
@@ -33,19 +38,42 @@ function btnRestar(){
     operacion__actual = "-";//asignamos la operación
     operacion.innerHTML = " - ";
     nuevaResta();//gereramos los numeros aleatorios
+    //verificarResta();
 }
-
+/*
+// ORIGINAL
 function nuevaResta(){
     n1 = parseInt(Math.random()*rango.value);
     n2 = parseInt(Math.random()*rango.value);
     //Con este if evito que la resta me de números negativos, o sea, 45 - 512 = 
-    if(n1 > n2){//num1>num2...o sino me da números negativos
+    //num1>num2...o sino me da números negativos
+    
+    if(n1 > n2){
         num1.innerHTML = n1;
         num2.innerHTML = n2;
     }else{
         num1.innerHTML = n2;
         num2.innerHTML = n1;
     }
+    
+    resultado__alumno.focus();
+}
+*/
+//ESTO FUNCIONA MEJOR QUE LA ANTERIOR PORQUE LA ANTERIOR ME DA ERROR EN ALGUNAS RESTAS Y NO SÉ POR QUÉ
+//PERO LO HE VISTO CON LOS CHICOS EN EL AULA
+//OJO QUE ESTE TIPO DE RESTAS DAN NEGATIVO..y el resultado me habilita a poner -3
+function nuevaResta(){
+    n1 = parseInt(Math.random()*rango.value);
+    n2 = parseInt(Math.random()*rango.value);
+    //con esta parte me ahorro los números negativos en los resultador
+    if (n1 > n2){
+        num1.innerHTML = n1;
+        num2.innerHTML = n2;
+    }else{
+        nuevaResta();
+    }
+
+
     resultado__alumno.focus();
 }
 
@@ -155,14 +183,35 @@ function corregir(){
     }
     let respuesta;
     //armo las operaciones
-    let operacion = n1 + operacion__actual + n2;
+    let operacion = n1 + " " + operacion__actual + " " + n2;
     respuesta = eval(operacion);
+    //Esto me guarda la última operación en el local...pero ¿podría hacer un div que me las guarde todas?
+    localStorage.setItem("cuenta:", operacion);
+    localStorage.setItem("solución:", respuesta);
+    localStorage.setItem("solución_alumno", resultado__alumno.value);
+
     //creamos un elemento i paara agregar el icono de bien o mal
     var i = document.createElement("i");
     if(resultado__alumno.value.split('').reverse().join('') == respuesta){
         i.className = "fa-solid fa-check verde";
+        //Con esto dejo agregada la operacion 
+        const h2 = document.createElement("h2");
+        h2.textContent = operacion + " = " + respuesta + "   " ;
+        //+ "El alumno respondió: " + resultado__alumno.value.split('').reverse().join('');
+        mensaje__corregido.appendChild(h2);
+        const h3 = document.createElement("h3");
+        h3.textContent = " El alumno respondió: " + resultado__alumno.value.split('').reverse().join('');
+        mensaje__corregido.appendChild(h3);
     }else{
         i.className = "fa-solid fa-xmark rojo";
+        //Con esto dejo agregada la operacion 
+        const h2 = document.createElement("h2");
+        h2.textContent = operacion + " = " + respuesta + "   " ;
+        //+ "El alumno respondió: " + resultado__alumno.value.split('').reverse().join('');
+        mensaje__corregido.appendChild(h2);
+        const h3 = document.createElement("h3");
+        h3.textContent = " El alumno respondió: " + resultado__alumno.value.split('').reverse().join('');
+        mensaje__corregido.appendChild(h3);
     }
     //agregamos el elemento al div de correcciones 
     mensaje__corregido.appendChild(i);
@@ -182,6 +231,20 @@ function corregir(){
     }
     //limpio el input de resultado para reiniciar
     resultado__alumno.value = "";
+
+    // ID del div para las operaciones todas "todas_las_operaciones"
+    // function todas_las_operaciones(){
+    //     //esto es para crear un div como el que tengo en html...notese que hay un solo div!!
+    //     const contenedor = document.createElement("div");
+    //     div.className = "todas_las_operaciones";
+    //     //todas_las_operaciones
+    //     const h2 = document.createElement("h2");
+    //     h2.textContent = operacion + " = " + respuesta + " El alumno respondió: " + resultado__alumno.value;
+    //     todas_las_operaciones.appendChild(h2);
+        
+
+    // }
+        
 }
 //Esto solo tiene sentido si tengo las 4 operaciones en la misma pantalla...sino lo pongo activado en la clase css y esto se va
 function activarBoton(idBoton){

@@ -50,7 +50,7 @@ const bd__juego = [
         op0: "Nilo", 
         op1: "Amazonas",
         op2:"Éufrates", 
-        correcta: "1"
+        correcta: "0"
     },
     {
         id:6,
