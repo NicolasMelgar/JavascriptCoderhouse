@@ -1,33 +1,21 @@
-
-
-
-//3 variables:  el número al azar - el numero que ingresa el usuario - el mensaje que ve el usuario
+//Variables
 let miNumeroAdivinar = Math.floor(Math.random()*100) +1;
 console.log(miNumeroAdivinar);
 const resetInput = document.getElementById("numeroIngresado");
-
 let numeroIngresado = document.getElementById("numeroIngresado");
-
 let mensajeAdivinador = document.getElementById("mensajeAdivinador");
-
-//Esta variable es opcional completamente, pero me gusta
+//Estas variables son opcionales, pero me gustan
 let intentos = document.getElementById("intentos");
 let intentoContador = -1; //el contador va sumando...pero quiero que arranque en cero
-
 let vecesJugadas = document.getElementById("menosIntentos");
 let menosIntento = 1;
 
-
 //Desde el Botón verificar
-
 function comprobarResultado(){
-
     intentoContador++;
     intentos.textContent = intentoContador;
     menosIntento;
     vecesJugadas.textContent = menosIntento; 
-    
-   
 
     let num = parseInt(numeroIngresado.value);//me aseguro que sea un número
     if(num < 1 || num > 100 || isNaN(num)){
@@ -48,14 +36,7 @@ function comprobarResultado(){
         mensajeAdivinador.textContent = "El número a adivinar es menor";
         mensajeAdivinador.style.color = "darkblue";
     }
-    
-
-
 }
-
-
-
-
 //Desde el botón jugar
 function reiniciar() {comprobarResultado()
     miNumeroAdivinar = Math.floor(Math.random()*100) +1;
@@ -66,16 +47,10 @@ function reiniciar() {comprobarResultado()
     menosIntento++;
     btnAdivinar.disabled = false;    
     numeroIngresado.value = "Escribe un número";
-
     return;
 }
 
-
-
 //comprobarResultado();
-
-//Esto me gusta y es muy versátil
-//Con esto logro que al presionar enter se agregué la tarea
 let input = document.getElementById("numeroIngresado");
 input.addEventListener('keydown', (e) => {
     if(e.key === 'Enter'){
