@@ -93,7 +93,7 @@ function nuevaMultiplicacion(){
         n2 = parseInt(Math.ceil(Math.random()*10));//el "ceil" me deja siempre redondeo para arriba...así que evito la multiplicación por 0
         num1.innerHTML = n1;
         num2.innerHTML = n2;
-    }else{
+    }else{//acá sería si es mayor a 1000 el rango
         n1 = parseInt(Math.random()*rango.value);
         n2 = parseInt(Math.floor(Math.random()*100));//A veces aparece uno de una cifra. No me molesta, así que lo dejo. 
         num1.innerHTML = n1;
@@ -241,11 +241,24 @@ function corregir(){
     //     const h2 = document.createElement("h2");
     //     h2.textContent = operacion + " = " + respuesta + " El alumno respondió: " + resultado__alumno.value;
     //     todas_las_operaciones.appendChild(h2);
-        
-
     // }
+
+let divTodo = document.createElement("div");
+divTodo.innerHTML = "La operación es: " + `${operacion}`+ " = " + `${respuesta}`;
+document.body.appendChild(divTodo);
+
+//No entiendo porqué acá no me muestra la respuesta del alumno
+//OJO CON ESTA PARTE 17/8/23
+let respuesta_alumno = document.createElement("p");
+respuesta_alumno.innerHTML = "El alumno respondió: " + "RAMIRO: no entiendo por qué acá no veo la respuesta si lo puse igual que antes. " + `${resultado__alumno.value.split('').reverse().join('')}`;
+//respuesta_alumno.innerHTML = "El alumno respondió: " + `${resultado__alumno.value.split('').reverse().join('')}`;
+document.body.appendChild(respuesta_alumno);
         
 }
+
+
+
+
 //Esto solo tiene sentido si tengo las 4 operaciones en la misma pantalla...sino lo pongo activado en la clase css y esto se va
 function activarBoton(idBoton){
     document.getElementById("sumar").className = "";

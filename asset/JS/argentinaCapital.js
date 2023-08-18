@@ -1,3 +1,5 @@
+//Respecto a los codigos en lugar de un bucle, podrías utilizar el método Array.find() para buscar la provincia en el array. 
+//REVISAR POR APORTE DE RAMIRO
 let opcion = prompt("Escribe SALIR para terminar. \nToca enter para aprender provincias argentinas.");
 
 function capitales (){ 
