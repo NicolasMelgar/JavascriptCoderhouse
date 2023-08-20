@@ -65,14 +65,14 @@ a{
 a:hover{
     color: aliceblue;
 }
-.matematica, .adivinoNumero, .culturaGeneral{
+.matematica, .adivinoNumero, .culturaGeneral, .argentina{
     flex-basis: 40%;
     background-color: rgba(165, 42, 42, .8);
     margin: 1rem 1rem;
     text-align: center;
 }
 
-.americaLatina, .argentina{
+.americaLatina {
     flex-basis: 40%;
     background-color: rgba(83, 175, 110, 0.6);
     margin: 1rem 1rem;
